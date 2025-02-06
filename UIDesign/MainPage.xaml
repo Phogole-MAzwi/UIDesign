@@ -1,0 +1,66 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UIDesign.MainPage"
+             BackgroundColor="White"
+             Title="Instagram Clone">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Top Navigation Bar -->
+        <Grid Grid.Row="0" BackgroundColor="White" HeightRequest="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Instagram" 
+                   Grid.Column="0"
+                   FontSize="20" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Start" 
+                   VerticalOptions="Center"
+                   Margin="10,0"/>
+
+            <Button x:Name="btnSearch" 
+                    Text="🔍" 
+                    Grid.Column="1"
+                    BackgroundColor="Transparent"/>
+
+            <Button x:Name="btnAddPost" 
+                    Text="+" 
+                    Grid.Column="2"
+                    BackgroundColor="Transparent"
+                    FontSize="20"/>
+
+            <Button x:Name="btnReels" 
+                    Text="🎥" 
+                    Grid.Column="3"
+                    BackgroundColor="Transparent"/>
+        </Grid>
+
+        <!-- Content Area -->
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout x:Name="feedLayout">
+                <!-- Posts will be dynamically added -->
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Bottom Navigation Bar -->
+        <Grid Grid.Row="2" BackgroundColor="White" HeightRequest="50">
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Button x:Name="btnHome" Text="🏠" BackgroundColor="Transparent"/>
+                <Button x:Name="btnSearch2" Text="🔍" BackgroundColor="Transparent"/>
+                <Button x:Name="btnAddContent" Text="➕" BackgroundColor="Transparent"/>
+                <Button x:Name="btnReels2" Text="🎥" BackgroundColor="Transparent"/>
+                <Button x:Name="btnProfile" Text="👤" BackgroundColor="Transparent"/>
+            </HorizontalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>
